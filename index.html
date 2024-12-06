@@ -22,6 +22,29 @@
     background-size: cover; /* Ensure the background covers the entire screen */
     color: #333;
 }
+/* Animation for the colorful gradient */
+@keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0); /* Fully transparent background */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Keep shadow for contrast */
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+}
 
 
 

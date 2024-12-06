@@ -162,7 +162,18 @@
                 })
                 .join("");
         }
-
+        function encrypt() {
+            const text = document.getElementById("plaintext").value;
+            const key1 = parseInt(document.getElementById("key1").value);
+            const key2 = parseInt(document.getElementById("key2").value);
+            if (isNaN(key1) || isNaN(key2)) {
+                alert("Please enter valid keys!");
+                return;
+            }
+            const layer1 = caesarCipher(text, key1, true);
+            const layer2 = caesarCipher(layer1, key2, true);
+            document.getElementById("output").value = layer2;
+        }
 
 </head>
 </body>

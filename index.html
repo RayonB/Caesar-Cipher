@@ -80,6 +80,37 @@
             font-size: 16px;
             transition: border-color 0.3s, transform 0.3s ease-in-out;
         }
+        /* Animation on input focus */
+        textarea:focus, input:focus {
+            border-color: #ff6a00; /* Highlight with color on focus */
+            transform: scale(1.05); /* Slightly grow on focus */
+        }
+
+        /* Button Styles */
+        button {
+            width: 48%;
+            padding: 12px;
+            margin: 10px 1%;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            background-color: #007bff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s ease-in-out;
+        }
+
+        /* Button Hover Animation */
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-5px); /* Button lift effect on hover */
+        }
+
+        /* Button Press Effect */
+        button:active {
+            transform: translateY(2px); /* Button press effect */
+        }
+
 
 
 </head>

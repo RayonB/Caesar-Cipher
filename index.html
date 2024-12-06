@@ -174,7 +174,20 @@
             const layer2 = caesarCipher(layer1, key2, true);
             document.getElementById("output").value = layer2;
         }
+        function decrypt() {
+            const text = document.getElementById("plaintext").value;
+            const key1 = parseInt(document.getElementById("key1").value);
+            const key2 = parseInt(document.getElementById("key2").value);
+            if (isNaN(key1) || isNaN(key2)) {
+                alert("Please enter valid keys!");
+                return;
+            }
+            const layer2 = caesarCipher(text, key2, false);
+            const layer1 = caesarCipher(layer2, key1, false);
+            document.getElementById("output").value = layer1;
+        }
 
+    </script>
 </head>
 </body>
 </html>
